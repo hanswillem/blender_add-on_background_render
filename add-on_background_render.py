@@ -52,7 +52,7 @@ class CREATEBATFILE_OT_Operator(bpy.types.Operator):
     #poll - if the poll function returns False, the button will be greyed out
     @classmethod
     def poll(cls, context):
-        return 2 > 1
+        return bpy.data.is_saved
     
     #execute
     def execute(self, context):
